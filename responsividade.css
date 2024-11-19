@@ -1,0 +1,53 @@
+@media (max-width: 768px) {
+    item {
+        flex: 0;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+    }
+
+.sidebar {
+    justify-content: flex-start;
+}
+
+.content {
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+}
+
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax (min-content, 15vh) minmax(min-content, 10 vh) 1fr;
+        grid-template-areas:     'header'
+                                 'sidebar'
+                                 'content';
+    }
+
+    .sidebar {
+        flex-flow: row wrap;
+        padding: 10px;
+    }
+
+    .item {
+        flex: 1;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    .header {
+        padding: 12%;
+    }
+}
+
+@media (max-width: 300px) {
+    .sidebar {
+        font-size: 10.5px;
+        flex-flow: row nowrap;
+        padding: 7%;
+    }
+
+    .item {
+        flex: 1 1 content; 
+    }
+}
